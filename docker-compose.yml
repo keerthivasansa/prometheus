@@ -75,7 +75,7 @@ services:
 #        constraints:
 #          - node.hostname == ${HOSTNAME}
   cadvisor:
-    image: gcr.io/cadvisor/cadvisor-arm
+    image: gcr.io/cadvisor/cadvisor-arm:v0.47.2
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:rw
