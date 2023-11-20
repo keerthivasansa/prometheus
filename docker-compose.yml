@@ -91,6 +91,9 @@ services:
 #          - node.hostname == ${HOSTNAME}
   cadvisor:
     image: gcr.io/cadvisor/cadvisor-arm:v0.47.2
+    privileged: true
+    devices:
+      - /dev/kmsg:/dev/kmsg
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:rw
